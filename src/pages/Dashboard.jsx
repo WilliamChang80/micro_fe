@@ -16,11 +16,10 @@ const Dashboard = () => {
 
   const getImages = async (food) => {
     const { foodName } = food;
-    console.log(process.env.UNSPLASH_API_KEY);
     const image = await axios
       .get("https://api.unsplash.com/search/photos", {
         params: {
-          client_id: `${process.env.UNSPLASH_API_KEY}`,
+          client_id: process.env.REACT_APP_UNSPLASH_API_KEY,
           query: foodName
         }
       })
