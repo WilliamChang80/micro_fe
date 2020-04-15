@@ -1,0 +1,21 @@
+.card {
+  width: 20%;
+  height: 20%;
+  margin: 2%;
+  padding: 1%;
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 20%;
+    margin: 3%;
+  }
+  &-price {
+    color: green;
+  }
+}
