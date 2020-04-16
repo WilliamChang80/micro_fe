@@ -1,63 +1,16 @@
+@import "dashboard.scss";
+@import "navbar.scss";
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.otf");
+}
+
 body {
-  background-color: rgb(20, 20, 20);
-}
-
-.card {
-  width: 20%;
-  height: 20%;
-  margin: 1%;
-  padding: 1%;
-  &-container {
-    display: flex;
-    flex-direction: row;
-  }
-  &-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 17vw;
-    height: 40vh;
-    margin: 3%;
-  }
-  &-price {
-    color: green;
-  }
-}
-
-.spinner {
-  .lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    margin: 8px;
-    border: 8px solid #fff;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+  font-family: "Montserrat", sans-serif;
 }

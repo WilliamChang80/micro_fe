@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Dashboard from "./pages/Dashboard";
-import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
+
+import MainPage from "./pages/MainPage";
 
 import "./style/main.scss";
 
@@ -9,9 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Switch>
-          <Route path="/dashboard" component={Dashboard}></Route>
-        </Switch>
+        <div className="background">
+          <Route path="/" component={MainPage} />
+        </div>
       </div>
     );
   }

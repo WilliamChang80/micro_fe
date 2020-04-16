@@ -1,0 +1,21 @@
+.navbar {
+  background-color: rgba(65, 64, 64, 0.5);
+  color: rgb(230, 230, 230);
+
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    p {
+      margin-bottom: 0;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .title {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
