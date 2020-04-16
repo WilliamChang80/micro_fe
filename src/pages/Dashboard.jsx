@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
@@ -47,7 +48,7 @@ const Dashboard = () => {
   return (
     <div>
       {data.length === 0 ? (
-        <div>Loading...</div>
+        <LoadingSpinner />
       ) : (
         <div className="card-container">{renderCard()}</div>
       )}
