@@ -39,7 +39,14 @@ const Dashboard = () => {
         ></img>
         <div className="card-body">
           {data.data.foodName}
-          <div className="card-price"> {data.data.foodPrice}</div>
+          <div className="card-price">
+            <i class="fa fa-money"></i>
+            {data.data.foodPrice}
+          </div>
+          <div className="card-rating">
+            <i class="fa fa-star"></i>
+            {data.data.rating}
+          </div>
         </div>
       </div>
     ));

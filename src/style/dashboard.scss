@@ -12,6 +12,9 @@
   height: 20%;
   margin: 1%;
   padding: 1%;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   &-container {
     display: flex;
     flex-direction: row;
@@ -26,6 +29,12 @@
   }
   &-price {
     color: green;
+  }
+  &-rating {
+    color: rgb(171, 189, 9);
+  }
+  .fa {
+    margin-right: 2%;
   }
 }
 
