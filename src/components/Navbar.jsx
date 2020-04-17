@@ -9,7 +9,7 @@ class Navbar extends Component {
           <p className="title" onClick={() => history.push("/dashboard")}>
             Food API
           </p>
-          <p>Create Food</p>
+          <p onClick={() => history.push("/food/create")}>Create Food</p>
         </div>
       </nav>
     );
