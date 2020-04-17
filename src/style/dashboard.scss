@@ -5,6 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .card {
@@ -15,8 +16,10 @@
   font-size: 1.2rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
   &-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
   }
   &-image {

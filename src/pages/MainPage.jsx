@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Navbar from "../components/Navbar";
 import FoodForm from "./FoodForm";
+import ErrorPage from "./ErrorPage";
 
 class MainPage extends Component {
   render() {
@@ -16,7 +17,8 @@ class MainPage extends Component {
             path="/food/create"
             component={FoodForm}
             history={this.props.history}
-          ></Route>
+          />
+          <Route path="*" component={ErrorPage} />
         </Switch>
       </div>
     );
