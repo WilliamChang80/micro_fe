@@ -1,0 +1,79 @@
+@import "color.scss";
+
+.form {
+  color: $primary-grey;
+  background-color: $primary-white;
+  margin: 5%;
+  border-radius: 0.3rem;
+
+  &-group {
+    position: relative;
+    padding: 15px 0 0;
+    margin: 0.8%;
+  }
+
+  &-field {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $grey;
+    outline: 0;
+    font-size: 1rem;
+    color: $primary-grey;
+    padding: 0.5% 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .form-label {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+    }
+  }
+
+  &-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $grey;
+  }
+
+  &-field:focus {
+    ~ .form-label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: $primary-blue;
+      font-weight: 700;
+    }
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-color: $primary-blue;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title {
+    margin: 0.5%;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &-subtitle {
+    margin-left: 1%;
+  }
+  &-submit {
+    margin: 1% 2%;
+    width: 20%;
+  }
+}

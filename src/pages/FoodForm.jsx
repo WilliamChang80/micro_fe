@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const FoodForm = ({ history }) => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
       .post("http://localhost:8093/api/food", {
@@ -14,12 +14,39 @@ const FoodForm = ({ history }) => {
       .then(history.push("/dashboard"));
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input name="foodName" placeholder="Enter Food Name" ref={register} />
-      <input name="foodPrice" placeholder="Enter Food Price" ref={register} />
-      <input name="rating" placeholder="Enter Food Rating" ref={register} />
-      <button className="btn btn-primary" />
-    </form>
+    <div className="form">
+      <form onSubmit={handleSubmit(onSubmit)} className="form-content">
+        <div className="form-title">Create Food</div>
+        <div className="form-group field">
+          <input
+            className="form-field"
+            name="foodName"
+            placeholder="Enter Food Name"
+            ref={register}
+          />
+          <label className="form-label">Food Name</label>
+        </div>
+        <div className="form-group field">
+          <input
+            className="form-field"
+            name="foodPrice"
+            placeholder="Enter Food Price"
+            ref={register}
+          />
+          <div className="form-label">Food Price</div>
+        </div>
+        <div className="form-group field">
+          <input
+            className="form-field"
+            name="rating"
+            placeholder="Enter Food Rating"
+            ref={register}
+          />
+          <div className="form-label">Food Rating</div>
+        </div>
+        <button className="btn btn-primary form-submit">Submit</button>
+      </form>
+    </div>
   );
 };
 

@@ -24,9 +24,12 @@ const Dashboard = () => {
           query: foodName
         }
       })
-      .then((res) => res.data.results[0].urls.small);
-
-    setData((data) => [...data, { image: image, data: food }]);
+      .then((res) => res.data.results[0].urls.small)
+      .catch((e) => console.log(e));
+    const imageData = !!image
+      ? image
+      : "https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyNjQ3MX0";
+    setData((data) => [...data, { image: imageData, data: food }]);
   };
 
   const renderCard = () => {
